@@ -1,6 +1,0 @@
-services:
-  simanja:
-    image: simanja
-    build:
-      context: .
-      dockerfile: ./Dockerfile
