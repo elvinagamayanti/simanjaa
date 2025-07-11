@@ -89,8 +89,8 @@ COPY . .
 EXPOSE 8000
 
 # Install PHP and JS dependencies
-RUN composer install
-RUN npm install
+# RUN composer install
+# RUN npm install
 
 # Run Laravel migrations and start server
 CMD php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
