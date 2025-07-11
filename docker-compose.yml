@@ -1,0 +1,18 @@
+services:
+  simanja:
+    image: simanja
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_HOST: shortline.proxy.rlwy.net
+      MYSQL_DATABASE: railway
+      MYSQL_USER: root
+      MYSQL_PASSWORD: VhiDKDbBqocVfdjuGzeMiaImbBpiFYNA
+    ports:
+      - "31871:31871"
+    volumes:
+      - mysql_data:/var/lib/mysql
